@@ -1,0 +1,6 @@
+com\kraken\tests\TickerTests.class
+com\kraken\tests\OhlcTests.class
+com\kraken\engine\TestEngine$1.class
+com\kraken\tests\OrderBookTests.class
+com\kraken\tests\TradeTests.class
+com\kraken\engine\TestEngine.class

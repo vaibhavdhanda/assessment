@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="28" passed="28">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="79034" started-at="2022-07-02T22:59:58 CEST" finished-at="2022-07-02T23:01:17 CEST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="79034" started-at="2022-07-02T22:59:58 CEST" finished-at="2022-07-02T23:01:17 CEST">
+      <class name="com.kraken.tests.OhlcTests">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="beforeClass" is-config="true" duration-ms="2945" started-at="2022-07-02T22:59:58 CEST" finished-at="2022-07-02T23:00:01 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="validateEndTimeIsAfterBeginTime(java.lang.String)[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="validateEndTimeIsAfterBeginTime" duration-ms="1584" started-at="2022-07-02T23:00:01 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:02 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEndTimeIsAfterBeginTime -->
+        <test-method status="PASS" signature="validateEndTimeIsAfterBeginTime(java.lang.String)[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="validateEndTimeIsAfterBeginTime" duration-ms="1524" started-at="2022-07-02T23:00:02 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:04 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEndTimeIsAfterBeginTime -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:00:02 CEST" finished-at="2022-07-02T23:00:02 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:04 CEST" finished-at="2022-07-02T23:00:04 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateOpenAndClosePricesAreWithInDailyHighAndLow(java.lang.String)[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="validateOpenAndClosePricesAreWithInDailyHighAndLow" duration-ms="1524" started-at="2022-07-02T23:00:04 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:05 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateOpenAndClosePricesAreWithInDailyHighAndLow -->
+        <test-method status="PASS" signature="validateOpenAndClosePricesAreWithInDailyHighAndLow(java.lang.String)[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="validateOpenAndClosePricesAreWithInDailyHighAndLow" duration-ms="1527" started-at="2022-07-02T23:00:05 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:07 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateOpenAndClosePricesAreWithInDailyHighAndLow -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:00:05 CEST" finished-at="2022-07-02T23:00:05 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:00:07 CEST" finished-at="2022-07-02T23:00:07 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="validateSymbolIsCorrect" duration-ms="1551" started-at="2022-07-02T23:00:07 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:08 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:00:08 CEST" finished-at="2022-07-02T23:00:08 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="validateSymbolIsCorrect" duration-ms="1536" started-at="2022-07-02T23:00:08 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:10 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:10 CEST" finished-at="2022-07-02T23:00:10 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.kraken.tests.OhlcTests@18eed359]" name="afterClass" is-config="true" duration-ms="6" started-at="2022-07-02T23:00:10 CEST" finished-at="2022-07-02T23:00:10 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.kraken.tests.OhlcTests -->
+      <class name="com.kraken.tests.OrderBookTests">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="beforeClass" is-config="true" duration-ms="813" started-at="2022-07-02T23:00:10 CEST" finished-at="2022-07-02T23:00:11 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="validateBestAskIsGreaterThanBestBidInBookSnapshot(java.lang.String)[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="validateBestAskIsGreaterThanBestBidInBookSnapshot" duration-ms="1541" started-at="2022-07-02T23:00:11 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:12 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBestAskIsGreaterThanBestBidInBookSnapshot -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="cleanupAllMessages" is-config="true" duration-ms="2" started-at="2022-07-02T23:00:12 CEST" finished-at="2022-07-02T23:00:12 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateBestAskIsGreaterThanBestBidInBookSnapshot(java.lang.String)[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="validateBestAskIsGreaterThanBestBidInBookSnapshot" duration-ms="1532" started-at="2022-07-02T23:00:12 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:14 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBestAskIsGreaterThanBestBidInBookSnapshot -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:14 CEST" finished-at="2022-07-02T23:00:14 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSortingOfOrdersInBookSnapshot(java.lang.String)[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="validateSortingOfOrdersInBookSnapshot" duration-ms="1531" started-at="2022-07-02T23:00:14 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:15 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSortingOfOrdersInBookSnapshot -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:00:15 CEST" finished-at="2022-07-02T23:00:15 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSortingOfOrdersInBookSnapshot(java.lang.String)[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="validateSortingOfOrdersInBookSnapshot" duration-ms="1521" started-at="2022-07-02T23:00:15 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:17 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSortingOfOrdersInBookSnapshot -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:17 CEST" finished-at="2022-07-02T23:00:17 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="validateSymbolIsCorrect" duration-ms="1540" started-at="2022-07-02T23:00:17 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:18 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:00:18 CEST" finished-at="2022-07-02T23:00:18 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="validateSymbolIsCorrect" duration-ms="1539" started-at="2022-07-02T23:00:18 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:20 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:20 CEST" finished-at="2022-07-02T23:00:20 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.kraken.tests.OrderBookTests@210366b4]" name="afterClass" is-config="true" duration-ms="2" started-at="2022-07-02T23:00:20 CEST" finished-at="2022-07-02T23:00:20 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.kraken.tests.OrderBookTests -->
+      <class name="com.kraken.tests.TradeTests">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="beforeClass" is-config="true" duration-ms="843" started-at="2022-07-02T23:00:33 CEST" finished-at="2022-07-02T23:00:34 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="validatePriceAndVolumeAreNotZero(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validatePriceAndVolumeAreNotZero" duration-ms="5114" started-at="2022-07-02T23:00:34 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:39 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePriceAndVolumeAreNotZero -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:00:39 CEST" finished-at="2022-07-02T23:00:39 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validatePriceAndVolumeAreNotZero(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validatePriceAndVolumeAreNotZero" duration-ms="15764" started-at="2022-07-02T23:00:39 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:55 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePriceAndVolumeAreNotZero -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:55 CEST" finished-at="2022-07-02T23:00:55 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validateSymbolIsCorrect" duration-ms="7119" started-at="2022-07-02T23:00:55 CEST" data-provider="ticker" finished-at="2022-07-02T23:01:02 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:01:02 CEST" finished-at="2022-07-02T23:01:02 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validateSymbolIsCorrect" duration-ms="3042" started-at="2022-07-02T23:01:02 CEST" data-provider="ticker" finished-at="2022-07-02T23:01:05 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:01:05 CEST" finished-at="2022-07-02T23:01:05 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateTriggeringOrderSideIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validateTriggeringOrderSideIsCorrect" duration-ms="4067" started-at="2022-07-02T23:01:05 CEST" data-provider="ticker" finished-at="2022-07-02T23:01:09 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTriggeringOrderSideIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:01:09 CEST" finished-at="2022-07-02T23:01:09 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateTriggeringOrderSideIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validateTriggeringOrderSideIsCorrect" duration-ms="1536" started-at="2022-07-02T23:01:09 CEST" data-provider="ticker" finished-at="2022-07-02T23:01:10 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTriggeringOrderSideIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:01:10 CEST" finished-at="2022-07-02T23:01:10 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateTriggeringOrderTypeIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validateTriggeringOrderTypeIsCorrect" duration-ms="4586" started-at="2022-07-02T23:01:10 CEST" data-provider="ticker" finished-at="2022-07-02T23:01:15 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTriggeringOrderTypeIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:01:15 CEST" finished-at="2022-07-02T23:01:15 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateTriggeringOrderTypeIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="validateTriggeringOrderTypeIsCorrect" duration-ms="1545" started-at="2022-07-02T23:01:15 CEST" data-provider="ticker" finished-at="2022-07-02T23:01:17 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTriggeringOrderTypeIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="cleanupAllMessages" is-config="true" duration-ms="0" started-at="2022-07-02T23:01:17 CEST" finished-at="2022-07-02T23:01:17 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.kraken.tests.TradeTests@6ddf90b0]" name="afterClass" is-config="true" duration-ms="2" started-at="2022-07-02T23:01:17 CEST" finished-at="2022-07-02T23:01:17 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.kraken.tests.TradeTests -->
+      <class name="com.kraken.tests.TickerTests">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="beforeClass" is-config="true" duration-ms="844" started-at="2022-07-02T23:00:20 CEST" finished-at="2022-07-02T23:00:21 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="validateBestAskIsGreaterThanBestBid(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateBestAskIsGreaterThanBestBid" duration-ms="1533" started-at="2022-07-02T23:00:21 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:22 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBestAskIsGreaterThanBestBid -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:22 CEST" finished-at="2022-07-02T23:00:22 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateBestAskIsGreaterThanBestBid(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateBestAskIsGreaterThanBestBid" duration-ms="1532" started-at="2022-07-02T23:00:22 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:24 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBestAskIsGreaterThanBestBid -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:24 CEST" finished-at="2022-07-02T23:00:24 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateBidAndAskPricesAreWithInDailyHighAndLow(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateBidAndAskPricesAreWithInDailyHighAndLow" duration-ms="1532" started-at="2022-07-02T23:00:24 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:25 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBidAndAskPricesAreWithInDailyHighAndLow -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:25 CEST" finished-at="2022-07-02T23:00:25 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateBidAndAskPricesAreWithInDailyHighAndLow(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateBidAndAskPricesAreWithInDailyHighAndLow" duration-ms="1531" started-at="2022-07-02T23:00:25 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:27 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBidAndAskPricesAreWithInDailyHighAndLow -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:27 CEST" finished-at="2022-07-02T23:00:27 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateOpenAndClosePricesAreWithInDailyHighAndLow(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateOpenAndClosePricesAreWithInDailyHighAndLow" duration-ms="1539" started-at="2022-07-02T23:00:27 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:28 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateOpenAndClosePricesAreWithInDailyHighAndLow -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:28 CEST" finished-at="2022-07-02T23:00:28 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateOpenAndClosePricesAreWithInDailyHighAndLow(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateOpenAndClosePricesAreWithInDailyHighAndLow" duration-ms="1525" started-at="2022-07-02T23:00:28 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:30 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateOpenAndClosePricesAreWithInDailyHighAndLow -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:30 CEST" finished-at="2022-07-02T23:00:30 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateSymbolIsCorrect" duration-ms="1547" started-at="2022-07-02T23:00:30 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:31 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:31 CEST" finished-at="2022-07-02T23:00:31 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="validateSymbolIsCorrect(java.lang.String)[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="validateSymbolIsCorrect" duration-ms="1528" started-at="2022-07-02T23:00:31 CEST" data-provider="ticker" finished-at="2022-07-02T23:00:33 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XBT/EUR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSymbolIsCorrect -->
+        <test-method status="PASS" signature="cleanupAllMessages()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="cleanupAllMessages" is-config="true" duration-ms="1" started-at="2022-07-02T23:00:33 CEST" finished-at="2022-07-02T23:00:33 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanupAllMessages -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.kraken.tests.TickerTests@2b2948e2]" name="afterClass" is-config="true" duration-ms="3" started-at="2022-07-02T23:00:33 CEST" finished-at="2022-07-02T23:00:33 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.kraken.tests.TickerTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

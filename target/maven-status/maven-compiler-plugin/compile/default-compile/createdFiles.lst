@@ -1,0 +1,5 @@
+com\kraken\utils\MessageHelper.class
+com\kraken\api\MessageHandler.class
+com\kraken\api\WebsocketClient.class
+com\kraken\api\MessageHandler$1.class
+com\kraken\utils\JsonHelper.class
