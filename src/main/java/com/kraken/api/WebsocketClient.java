@@ -1,5 +1,10 @@
 package com.kraken.api;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
+
 import java.io.IOException;
 import java.net.URI;
 import java.util.Set;
@@ -8,13 +13,21 @@ import javax.websocket.*;
 
 @ClientEndpoint
 public class WebsocketClient {
-
+    private static final Logger LOGGER = LogManager.getLogger(MessageHandler.class);
     Session userSession = null;
     private MessageHandler messageHandler;
 
-    public WebsocketClient(URI uri) throws Exception{
-        WebSocketContainer socketContainer = ContainerProvider.getWebSocketContainer();
-        socketContainer.connectToServer(this, uri);
+
+    public WebsocketClient(String apiUrl){
+        try {
+            URI apiUrI = new URI(apiUrl);
+            WebSocketContainer socketContainer = ContainerProvider.getWebSocketContainer();
+            socketContainer.connectToServer(this, apiUrI);
+        } catch (Exception e) {
+            e.printStackTrace();
+            LOGGER.error("subscribeTicker ticker = " + e);
+            Assert.assertTrue(false, "Connecting to api failed. Please checl the url provide in TestNg suite XML file.");
+        }
         this.messageHandler = new MessageHandler();
     }
 

@@ -1,22 +1,19 @@
 package com.kraken.engine;
 
-import com.kraken.api.MessageHandler;
 import com.kraken.api.WebsocketClient;
 import com.kraken.utils.JsonHelper;
 import com.kraken.utils.MessageHelper;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 
 import javax.json.JsonArray;
 import javax.json.JsonObject;
-import java.net.URI;
 import java.util.Iterator;
 import java.util.List;
 
 public class TestEngine {
-	private static final Logger LOGGER = LogManager.getLogger(MessageHandler.class);
+	private static final Logger LOGGER = LogManager.getLogger(TestEngine.class);
 	private static final int TICKER_FIELD_INDEX = 3;
 	private static final int TICKER_PRICE_OBJECT_INDEX = 1;
 	private static final int OHLC_PRICE_OBJECT_INDEX = 1;
@@ -35,60 +32,60 @@ public class TestEngine {
 	private static final int BOOK_ORDERS_OBJECT_INDEX = 1;
 	WebsocketClient websocketClient;
 
-	public TestEngine(String url) throws Exception {
-		this.websocketClient = new WebsocketClient(new URI(url));
+	public TestEngine(String apiUrl) {
+		this.websocketClient = new WebsocketClient(apiUrl);
 	}
 
 	public void subscribeTicker(String ticker) {
-		LOGGER.log(Level.INFO, "subscribeTicker ticker = " + ticker);
+		LOGGER.info("subscribeTicker ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getTickerSubscriptionPayload(ticker));
 		validateSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void unSubscribeTicker(String ticker) {
-		LOGGER.log(Level.INFO, "unSubscribeTicker ticker = " + ticker);
+		LOGGER.info("unSubscribeTicker ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getTickerUnSubscriptionPayload(ticker));
 		validateUnSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void subscribeOhlc(String ticker) {
-		LOGGER.log(Level.INFO, "subscribeOhlc for ticker = " + ticker);
+		LOGGER.info("subscribeOhlc for ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getOhlcSubscriptionPayload(ticker));
 		validateSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void unSubscribeOhlc(String ticker) {
-		LOGGER.log(Level.INFO, "unSubscribeOhlc ticker = " + ticker);
+		LOGGER.info("unSubscribeOhlc ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getOhlcUnSubscriptionPayload(ticker));
 		validateUnSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void subscribeTrade(String ticker) {
-		LOGGER.log(Level.INFO, "subscribeTrade ticker = " + ticker);
+		LOGGER.info("subscribeTrade ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getTradeSubscriptionPayload(ticker));
 		validateSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void unSubscribeTrade(String ticker) {
-		LOGGER.log(Level.INFO, "unSubscribeTrade ticker = " + ticker);
+		LOGGER.info("unSubscribeTrade ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getTradeUnSubscriptionPayload(ticker));
 		validateUnSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void subscribeSpread(String ticker) {
-		LOGGER.log(Level.INFO, "subscribeSpread ticker = " + ticker);
+		LOGGER.info("subscribeSpread ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getSpreadSubscriptionPayload(ticker));
 		validateSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void subscribeOrderBook(String ticker) {
-		LOGGER.log(Level.INFO, "subscribeOrderBook ticker = " + ticker);
+		LOGGER.info("subscribeOrderBook ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getBookSubscriptionPayload(ticker));
 		validateSubscriptionStatusMessageReceived(ticker);
 	}
 
 	public void unSubscribeOrderBook(String ticker) {
-		LOGGER.log(Level.INFO, "unSubscribeOrderBook ticker = " + ticker);
+		LOGGER.info("unSubscribeOrderBook ticker = " + ticker);
 		websocketClient.sendMessage(MessageHelper.getBookUnSubscriptionPayload(ticker));
 		validateUnSubscriptionStatusMessageReceived(ticker);
 	}
@@ -112,7 +109,7 @@ public class TestEngine {
 	}
 
 	public void validateBidAndAskPricesAreWithInDailyHighAndLow() {
-		LOGGER.log(Level.INFO, "validateBidAndAskPricesAreWithInDailyHighAndLow");
+		LOGGER.info("validateBidAndAskPricesAreWithInDailyHighAndLow");
 		List<String> messages = websocketClient.getMessageHandler().getAllTickerMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -129,7 +126,7 @@ public class TestEngine {
 	}
 
 	public void validateOpenAndClosePricesAreWithInDailyHighAndLow() {
-		LOGGER.log(Level.INFO, "validateOpenAndClosePricesAreWithInDailyHighAndLow");
+		LOGGER.info("validateOpenAndClosePricesAreWithInDailyHighAndLow");
 		List<String> messages = websocketClient.getMessageHandler().getAllTickerMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -146,7 +143,7 @@ public class TestEngine {
 	}
 
 	public void validateAskPriceIsGreaterThanBidPrice() {
-		LOGGER.log(Level.INFO, "validateAskPriceIsGreaterThanBidPrice");
+		LOGGER.info("validateAskPriceIsGreaterThanBidPrice");
 		List<String> messages = websocketClient.getMessageHandler().getAllTickerMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -161,7 +158,7 @@ public class TestEngine {
 	}
 
 	public void validateSymbolInTickerMessages(String ticker) {
-		LOGGER.log(Level.INFO, "validateSymbolInTickerMessages");
+		LOGGER.info("validateSymbolInTickerMessages");
 		List<String> messages = websocketClient.getMessageHandler().getAllTickerMessages();
 		for (String message : messages) {
 			JsonArray jsonArray = JsonHelper.getJsonArrayFromString(message);
@@ -171,7 +168,7 @@ public class TestEngine {
 	}
 
 	public void validateEndTimeIsAfterBeginTime() {
-		LOGGER.log(Level.INFO, "validateEndTimeIsAfterBeginTime");
+		LOGGER.info("validateEndTimeIsAfterBeginTime");
 		List<String> messages = websocketClient.getMessageHandler().getAllOhlcMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -186,7 +183,7 @@ public class TestEngine {
 	}
 
 	public void validateOhlcOpenAndClosePricesAreWithInDailyHighAndLow() {
-		LOGGER.log(Level.INFO, "validateOhlcOpenAndClosePricesAreWithInDailyHighAndLow");
+		LOGGER.info("validateOhlcOpenAndClosePricesAreWithInDailyHighAndLow");
 		List<String> messages = websocketClient.getMessageHandler().getAllOhlcMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -205,7 +202,7 @@ public class TestEngine {
 	}
 
 	public void validateSymbolInOhlcMessages(String ticker) {
-		LOGGER.log(Level.INFO, "validateSymbolInOhlcMessages");
+		LOGGER.info("validateSymbolInOhlcMessages");
 		List<String> messages = websocketClient.getMessageHandler().getAllOhlcMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -217,7 +214,7 @@ public class TestEngine {
 	}
 
 	public void validateSymbolInTradeMessages(String ticker) {
-		LOGGER.log(Level.INFO, "validateSymbolInTradeMessages");
+		LOGGER.info("validateSymbolInTradeMessages");
 		List<String> messages = websocketClient.getMessageHandler().getAllTradeMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -229,7 +226,7 @@ public class TestEngine {
 	}
 
 	public void validatePriceAndVolumeAreNotZero() {
-		LOGGER.log(Level.INFO, "validatePriceAndVolumeAreNotZero");
+		LOGGER.info("validatePriceAndVolumeAreNotZero");
 		List<String> messages = websocketClient.getMessageHandler().getAllTradeMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -250,7 +247,7 @@ public class TestEngine {
 	}
 
 	public void validateTriggeringOrderSideIsCorrect() {
-		LOGGER.log(Level.INFO, "validateTriggeringOrderSideIsCorrect");
+		LOGGER.info("validateTriggeringOrderSideIsCorrect");
 		List<String> messages = websocketClient.getMessageHandler().getAllTradeMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -271,7 +268,7 @@ public class TestEngine {
 	}
 
 	public void validateTriggeringOrderTypeIsCorrect() {
-		LOGGER.log(Level.INFO, "validateTriggeringOrderTypeIsCorrect");
+		LOGGER.info("validateTriggeringOrderTypeIsCorrect");
 		List<String> messages = websocketClient.getMessageHandler().getAllTradeMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -291,7 +288,7 @@ public class TestEngine {
 	}
 
 	public void validateSymbolInOrderBookMessages(String ticker) {
-		LOGGER.log(Level.INFO, "validateSymbolInOrderBookMessages ticker = " + ticker);
+		LOGGER.info("validateSymbolInOrderBookMessages ticker = " + ticker);
 		List<String> messages = websocketClient.getMessageHandler().getAllOrderBookMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -302,7 +299,7 @@ public class TestEngine {
 	}
 
 	public void validateSortingOfOrdersInBookSnapshot() {
-		LOGGER.log(Level.INFO, "validateSortingOfOrdersInBookSnapshot");
+		LOGGER.info("validateSortingOfOrdersInBookSnapshot");
 		List<String> messages = websocketClient.getMessageHandler().getAllOrderBookMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -336,7 +333,7 @@ public class TestEngine {
 	}
 
 	public void validateBestAskIsGreaterThanBestBidInBookSnapshot() {
-		LOGGER.log(Level.INFO, "validateBestAskIsGreaterThanBestBidInBookSnapshot");
+		LOGGER.info("validateBestAskIsGreaterThanBestBidInBookSnapshot");
 		List<String> messages = websocketClient.getMessageHandler().getAllOrderBookMessages();
 		Iterator<String> iter = messages.iterator();
 		while (iter.hasNext()) {
@@ -360,14 +357,14 @@ public class TestEngine {
 	}
 
 	private void assertEquals(String fieldName, String actualValue, String expectedValue) {
-		LOGGER.log(Level.INFO, "assertEquals");
+		LOGGER.info("assertEquals");
 		Assert.assertEquals(actualValue, expectedValue,
 				String.format("Actual %s doesn't match expected ticker. Actual=%s and Expected=%s", fieldName, actualValue, expectedValue));
 
 	}
 
 	public void cleanupAllMessages() {
-		LOGGER.log(Level.INFO, "cleanupAllMessages");
+		LOGGER.info("cleanupAllMessages");
 		websocketClient.getMessageHandler().cleanupAllMessages();
 	}
 
@@ -376,7 +373,7 @@ public class TestEngine {
 	}
 
 	public void logout() {
-		LOGGER.log(Level.INFO, "logout");
+		LOGGER.info("logout");
 		this.websocketClient.logOut();
 	}
 }

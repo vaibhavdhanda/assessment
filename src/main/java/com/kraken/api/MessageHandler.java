@@ -30,33 +30,33 @@ public class MessageHandler {
 		allMessages.add(message);
 		switch (event) {
 		case "systemStatus":
-			LOGGER.log(Level.OFF, "systemStatus: " + message);
+			LOGGER.info("systemStatus: " + message);
 			allSystemStatusMessages.add(message);
 			break;
 		case "subscriptionStatus":
-			LOGGER.log(Level.OFF, "subscriptionStatus: " + message);
+			LOGGER.info("subscriptionStatus: " + message);
 			allSubscriptionStatusMessages.add(message);
 			break;
 		case "ticker":
-			LOGGER.log(Level.OFF, "ticker: " + message);
+			LOGGER.info("ticker: " + message);
 			allTickerMessages.add(message);
 			break;
 		case "ohlc":
-			LOGGER.log(Level.OFF, "ohlc: " + message);
+			LOGGER.info("ohlc: " + message);
 			allOhlcMessages.add(message);
 			break;
 		case "trade":
-			LOGGER.log(Level.OFF, "trade: " + message);
+			LOGGER.info("trade: " + message);
 			allTradeMessages.add(message);
 			break;
 		case "book":
-			LOGGER.log(Level.OFF, "book: " + message);
+			LOGGER.info("book: " + message);
 			allOrderBookMessages.add(message);
 			break;
 		case "heartbeat":
 			break;
 		default:
-			LOGGER.log(Level.ERROR, "Invalid event in message" + event + ". Message =  " + message);
+			LOGGER.error("Invalid event in message" + event + ". Message =  " + message);
 			throw new IllegalArgumentException("Invalid event in message" + event + ". Message =  " + message);
 		}
 

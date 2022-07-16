@@ -51,6 +51,16 @@
             <version>3.0.0-M5</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.18.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.18.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -60,7 +70,9 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <skip>${skipTests}</skip>
-                    <printSummary>true</printSummary>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${testng.xml}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -84,4 +96,25 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>prod-websocket-api-regression-tests</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <testng.xml>src/test/resources/regression-suite-prod.xml</testng.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>beta-websocket-api-regression-tests</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <testng.xml>src/test/resources/regression-suite-beta.xml</testng.xml>
+            </properties>
+        </profile>
+
+    </profiles>
 </project>

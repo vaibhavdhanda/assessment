@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BETA-RegressionTests" parallel="false">
+    <test name="WebSocketApi">
+        <parameter name="apiUrl" value="wss://beta-ws.kraken.com"/>
+        <classes>
+            <class name="com.kraken.tests.OhlcTests"></class>
+            <class name="com.kraken.tests.TickerTests"></class>
+            <class name="com.kraken.tests.OrderBookTests"></class>
+            <class name="com.kraken.tests.TradeTests"></class>
+        </classes>
+    </test>
+</suite>
