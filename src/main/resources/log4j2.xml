@@ -2,7 +2,7 @@
 <Configuration status="INFO">
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
-            <PatternLayout pattern="%n%5p %d{[dd.MM.yy HH:mm:ss.SSS]} %c{3} %m" />
+            <PatternLayout pattern="%5p %d{[dd.MM.yy HH:mm:ss.SSS]} %c{3} %m%n" />
         </Console>
     </Appenders>
     <Loggers>

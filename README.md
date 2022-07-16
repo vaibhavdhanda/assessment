@@ -49,21 +49,27 @@ The tests have been kept in separate tests classes each for individual API/Subsc
 ### Through docker:
 * Unzip zip file to local directory
 * Open Command prompt and navigate to project root and run following commands
-docker build --no-cache -t my-image:1 -f ./Dockerfile .
-docker run -it --rm my-image:1 /bin/sh
-After hitting enter on second command type in: 'mvn clean test -DskipTests=false' to run the tests
+  * `docker build --no-cache -t my-image:1 -f ./Dockerfile .` 
+  * `docker run -it --rm my-image:1 /bin/sh`
+  * After hitting enter on second command type/paste: 
+    * For PROD: `mvn clean test -B -P prod-websocket-api-regression-tests -DskipTests=false` 
+    * For BETA: `mvn clean test -B -P beta-websocket-api-regression-tests -DskipTests=false`
 
 Execution Timings
 * After the test run you type in these commands to view results:
-* cd /target/surefire-reports
-* less TEST-TestSuite.xml | grep "testcase name"
+  * `cd /target/surefire-reports`
+  * `less TEST-TestSuite.xml | grep "testcase name"`
 * this will show time taken to tun each individual case
 
 ### Directly from IDE as TestNG suite:
-The tests could also be run directly from IDE by running TestNG suite file which can be found here: src/test/resources/testNg.xml
+The tests could also be run directly from IDE by running TestNG suite file which can be found here: 
+* For PROD: src/test/resources/regression-suite-prod.xml
+* For BETA: src/test/resources/regression-suite-beta.xml
 
 ### Using maven:
-Directly running 'mvn clean test -DskipTests=false' from terminal from project root directory 
+* Go to project root directory and run one of the following mvn commands:  
+  * For running test against PROD:`mvn clean test -B -P prod-websocket-api-regression-tests -DskipTests=false` 
+  * For running test against BETA:`mvn clean test -B -P beta-websocket-api-regression-tests -DskipTests=false` 
 
 
 ### Prerequisites

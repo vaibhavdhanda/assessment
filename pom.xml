@@ -42,7 +42,7 @@
         <dependency>
             <groupId>org.awaitility</groupId>
             <artifactId>awaitility</artifactId>
-            <version>4.0.3</version>
+            <version>4.2.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -56,11 +56,6 @@
             <artifactId>log4j-core</artifactId>
             <version>2.18.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.18.0</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -71,6 +66,7 @@
                 <configuration>
                     <skip>${skipTests}</skip>
                     <suiteXmlFiles>
+                        <!--suppress UnresolvedMavenProperty -->
                         <suiteXmlFile>${testng.xml}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>

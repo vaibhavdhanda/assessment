@@ -357,7 +357,7 @@ public class TestEngine {
 	}
 
 	private void assertEquals(String fieldName, String actualValue, String expectedValue) {
-		LOGGER.info("assertEquals");
+		LOGGER.info(String.format("assertEquals: fieldName = %s, actualValue = %s, expectedValue=%s",fieldName, actualValue, expectedValue));
 		Assert.assertEquals(actualValue, expectedValue,
 				String.format("Actual %s doesn't match expected ticker. Actual=%s and Expected=%s", fieldName, actualValue, expectedValue));
 

@@ -5,9 +5,9 @@
         <parameter name="apiUrl" value="wss://ws.kraken.com"/>
         <classes>
             <class name="com.kraken.tests.OhlcTests"></class>
-          <!--  <class name="com.kraken.tests.TickerTests"></class>
+            <class name="com.kraken.tests.TickerTests"></class>
             <class name="com.kraken.tests.OrderBookTests"></class>
-            <class name="com.kraken.tests.TradeTests"></class>-->
+            <class name="com.kraken.tests.TradeTests"></class>
         </classes>
     </test>
 </suite>

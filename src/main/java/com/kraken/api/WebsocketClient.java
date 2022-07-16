@@ -13,12 +13,13 @@ import javax.websocket.*;
 
 @ClientEndpoint
 public class WebsocketClient {
-    private static final Logger LOGGER = LogManager.getLogger(MessageHandler.class);
+    private static final Logger LOGGER = LogManager.getLogger(WebsocketClient.class);
     Session userSession = null;
     private MessageHandler messageHandler;
 
 
     public WebsocketClient(String apiUrl){
+        LOGGER.info("WebsocketClient: connecting to URL=" + apiUrl);
         try {
             URI apiUrI = new URI(apiUrl);
             WebSocketContainer socketContainer = ContainerProvider.getWebSocketContainer();
@@ -62,6 +63,7 @@ public class WebsocketClient {
             try {
                 s.close();
             } catch (IOException e) {
+                LOGGER.error("logOut: Exception when attempting log out - " + e);
                 e.printStackTrace();
             }
         });

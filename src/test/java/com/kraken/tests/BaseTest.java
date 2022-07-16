@@ -1,17 +1,17 @@
 package com.kraken.tests;
 
 import com.kraken.engine.TestEngine;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.*;
+
+import java.lang.reflect.Method;
 
 public class BaseTest {
-    private String apiUrl = "undefined";
+    private static final Logger LOGGER = LogManager.getLogger(BaseTest.class);
     TestEngine testEngine;
 
     public BaseTest(String apiUrl){
-        this.apiUrl = apiUrl;
         testEngine = new TestEngine(apiUrl);
     }
 
@@ -20,15 +20,20 @@ public class BaseTest {
         return new Object[][] { { "XBT/USD" }, { "XBT/EUR" } };
     }
 
+    @BeforeMethod
+    public void beforeTestCase(Method m) {
+        LOGGER.info("Test Started: " + m.getName());
+    }
+
     @AfterMethod(alwaysRun = true)
-    public void cleanupAllMessages(){
+    public void cleanupAllMessages(Method m){
         testEngine.cleanupAllMessages();
+        LOGGER.info("Test Completed: " + m.getName());
     }
 
     @AfterClass(alwaysRun = true)
     private void afterClass() {
         testEngine.logout();
     }
-
 
 }
