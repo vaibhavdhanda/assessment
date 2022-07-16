@@ -57,8 +57,7 @@ The tests have been kept in separate tests classes each for individual API/Subsc
 
 Execution Timings
 * After the test run you type in these commands to view results:
-  * `cd /target/surefire-reports`
-  * `less TEST-TestSuite.xml | grep "testcase name"`
+  * `cd /target/surefire-reports && less TEST-TestSuite.xml | grep "testcase name"`
 * this will show time taken to tun each individual case
 
 ### Directly from IDE as TestNG suite:
