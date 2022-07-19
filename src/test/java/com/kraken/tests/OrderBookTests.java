@@ -1,11 +1,12 @@
 package com.kraken.tests;
 
-import org.testng.annotations.*;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 
 public class OrderBookTests extends BaseTest {
 
-    @Parameters({ "apiUrl" })
+    @Parameters({"apiUrl"})
     public OrderBookTests(String apiUrl) {
         super(apiUrl);
     }

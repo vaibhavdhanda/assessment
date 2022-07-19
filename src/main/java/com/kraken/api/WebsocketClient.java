@@ -1,14 +1,13 @@
 package com.kraken.api;
 
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 
+import javax.websocket.*;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Set;
-import javax.websocket.*;
 
 
 @ClientEndpoint
@@ -18,7 +17,7 @@ public class WebsocketClient {
     private MessageHandler messageHandler;
 
 
-    public WebsocketClient(String apiUrl){
+    public WebsocketClient(String apiUrl) {
         LOGGER.info("WebsocketClient: connecting to URL=" + apiUrl);
         try {
             URI apiUrI = new URI(apiUrl);
@@ -53,13 +52,13 @@ public class WebsocketClient {
         this.userSession.getAsyncRemote().sendText(message);
     }
 
-    public MessageHandler getMessageHandler(){
+    public MessageHandler getMessageHandler() {
         return messageHandler;
     }
 
-    public void logOut(){
+    public void logOut() {
         Set<Session> sessions = this.userSession.getOpenSessions();
-        sessions.forEach( s -> {
+        sessions.forEach(s -> {
             try {
                 s.close();
             } catch (IOException e) {

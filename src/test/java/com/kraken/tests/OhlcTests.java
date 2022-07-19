@@ -1,11 +1,12 @@
 package com.kraken.tests;
 
-import org.testng.annotations.*;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 
 public class OhlcTests extends BaseTest {
 
-    @Parameters({ "apiUrl" })
+    @Parameters({"apiUrl"})
     public OhlcTests(String apiUrl) {
         super(apiUrl);
     }

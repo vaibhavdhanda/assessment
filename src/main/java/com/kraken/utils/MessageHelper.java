@@ -6,7 +6,7 @@ import javax.json.JsonObject;
 
 
 public class MessageHelper {
-    public static String getTickerSubscriptionPayload(String ticker){
+    public static String getTickerSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "subscribe")
                 .add("pair", getTickerArray(ticker))
@@ -15,7 +15,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getTickerUnSubscriptionPayload(String ticker){
+    public static String getTickerUnSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "unsubscribe")
                 .add("pair", getTickerArray(ticker))
@@ -24,7 +24,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getOhlcSubscriptionPayload(String ticker){
+    public static String getOhlcSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "subscribe")
                 .add("pair", getTickerArray(ticker))
@@ -33,7 +33,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getOhlcUnSubscriptionPayload(String ticker){
+    public static String getOhlcUnSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "unsubscribe")
                 .add("pair", getTickerArray(ticker))
@@ -42,7 +42,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getTradeSubscriptionPayload(String ticker){
+    public static String getTradeSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "subscribe")
                 .add("pair", getTickerArray(ticker))
@@ -51,7 +51,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getTradeUnSubscriptionPayload(String ticker){
+    public static String getTradeUnSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "unsubscribe")
                 .add("pair", getTickerArray(ticker))
@@ -60,7 +60,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getSpreadSubscriptionPayload(String ticker){
+    public static String getSpreadSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "subscribe")
                 .add("pair", getTickerArray(ticker))
@@ -69,7 +69,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getBookSubscriptionPayload(String ticker){
+    public static String getBookSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "subscribe")
                 .add("pair", getTickerArray(ticker))
@@ -78,7 +78,7 @@ public class MessageHelper {
                 .toString();
     }
 
-    public static String getBookUnSubscriptionPayload(String ticker){
+    public static String getBookUnSubscriptionPayload(String ticker) {
         return Json.createObjectBuilder()
                 .add("event", "unsubscribe")
                 .add("pair", getTickerArray(ticker))
@@ -88,39 +88,39 @@ public class MessageHelper {
     }
 
 
-    private static JsonArray getTickerArray(String ticker){
+    private static JsonArray getTickerArray(String ticker) {
         return Json.createArrayBuilder()
                 .add(ticker)
                 .build();
     }
 
-    private static JsonObject getTickerMessageObj(){
+    private static JsonObject getTickerMessageObj() {
         return Json.createObjectBuilder()
                 .add("name", "ticker")
                 .build();
     }
 
-    private static JsonObject getOhlcMessageObj(){
-        return  Json.createObjectBuilder()
+    private static JsonObject getOhlcMessageObj() {
+        return Json.createObjectBuilder()
                 .add("name", "ohlc")
                 .add("interval", 1)
                 .build();
     }
 
-    private static JsonObject getTradeMessageObj(){
-        return  Json.createObjectBuilder()
+    private static JsonObject getTradeMessageObj() {
+        return Json.createObjectBuilder()
                 .add("name", "trade")
                 .build();
     }
 
-    private static JsonObject getSpreadMessageObj(){
-        return  Json.createObjectBuilder()
+    private static JsonObject getSpreadMessageObj() {
+        return Json.createObjectBuilder()
                 .add("name", "spread")
                 .build();
     }
 
-    private static JsonObject getBookMessageObj(){
-        return  Json.createObjectBuilder()
+    private static JsonObject getBookMessageObj() {
+        return Json.createObjectBuilder()
                 .add("name", "book")
                 .build();
     }

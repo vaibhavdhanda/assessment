@@ -2,12 +2,12 @@
 <Configuration status="INFO">
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
-            <PatternLayout pattern="%5p %d{[dd.MM.yy HH:mm:ss.SSS]} %c{3} %m%n" />
+            <PatternLayout pattern="%5p %d{[dd.MM.yy HH:mm:ss.SSS]} %c{3} %m%n"/>
         </Console>
     </Appenders>
     <Loggers>
         <Root level="info">
-            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="ConsoleAppender"/>
         </Root>
     </Loggers>
 </Configuration>
