@@ -1,21 +1,14 @@
 package com.kraken.tests;
 
-import com.kraken.engine.TestEngine;
-import org.testng.annotations.*;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 
-public class TradeTests {
-    private final static String URL = "wss://ws.kraken.com";
-    TestEngine testEngine;
+public class TradeTests extends BaseTest {
 
-    @DataProvider(name = "ticker")
-    public Object[][] dataProviderMethod() {
-        return new Object[][] { { "XBT/USD" }, { "XBT/EUR" } };
-    }
-
-    @BeforeClass
-    private void beforeClass() throws Exception {
-        testEngine = new TestEngine(URL);
+    @Parameters({"apiUrl"})
+    public TradeTests(String apiUrl) {
+        super(apiUrl);
     }
 
     @Test(dataProvider = "ticker")
@@ -46,13 +39,4 @@ public class TradeTests {
         testEngine.unSubscribeTrade(ticker);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void cleanupAllMessages() {
-        testEngine.cleanupAllMessages();
-    }
-
-    @AfterClass(alwaysRun = true)
-    private void afterClass() {
-        testEngine.logout();
-    }
 }
