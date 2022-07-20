@@ -66,9 +66,7 @@ tests classes each for individual API/Subscription topic.
 
 Execution Timings
 
-* After the test run you type in these commands to view results:
-    * `cd /target/surefire-reports && less TEST-TestSuite.xml | grep "testcase name"`
-* this will show time taken to tun each individual case
+* Now a custom summary report is printed in console after the maven test build finishes. This also includes  time taken to run each individual case
 
 ### Directly from IDE as TestNG suite:
 
@@ -97,25 +95,6 @@ The tests could also be run directly from IDE by running TestNG suite file which
 * tyrus-standalone-client (version 1.9)
 * awaitility (version 4.0.3)
 * surefire-testng (version 3.0.0-M5)
-
-## Improvement areas
-
-### Logging:
-
-Embarrassingly that was the area where I spent most of my time. But just could not get the simple log4j logging working.
-Things which is usual day-to-day life work out of the box but for some reason did not work for me yesterday. Current
-programmatic logging is horrible should be replaced with something more robust instead of polluting all the supporting
-classes with the same logging related code.
-
-### Environment:
-
-Currently, the environment URL is hardcoded in the individual test classes and should ideally come from a config file
-without the tester having to manually update it in all the test classes.
-
-### Test summary:
-
-Currently, you have to do an extra step to grep the test reports file, but it should ideally be printed out of the box
-after the executions has finished.
 
 ## Functional challenges
 
